@@ -1,0 +1,19 @@
+{
+  "name": "sarang-pulse",
+  "version": "1.0.0",
+  "description": "Unified Operations Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --names \"server,client\" --prefix-colors \"blue,green\" \"npm start --prefix backend\" \"npm start --prefix frontend\"",
+    "clean-start": "npx kill-port 3000 3001 5000 && npm run dev",
+    "build": "npm install && cd frontend && npm install && npm run build",
+    "start": "cd backend && node server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "kill-port": "^2.0.1"
+  },
+  "keywords": ["mern", "dashboard"],
+  "author": "Sarang Infotech",
+  "license": "ISC"
+}
